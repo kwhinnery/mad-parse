@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Redirecting to download</title>
+    <title>Redirecting to download...</title>
     <meta name="description" content="A demo app landing page, powered by Twilio">
     <meta name="author" content="Twilio Inc. via Kevin Whinnery (@kevinwhinnery)">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,14 +13,15 @@
 <script type="text/javascript">
     //Grab configuration info, determine platform
     $.getJSON('/config.json', function(data) {
-        config = data;
-
-        //populate app download links
-        $('#androidLink').attr('href', config.androidLink);
-        $('#iosLink').attr('href', config.iosLink);
-
-        //Initialize Parse JS SDK
-        Parse.initialize(config.parseAppId, config.parseJavaScriptKey);
+        if (navigator.userAgent.match(/Android/i)) {
+            window.location.href = data.androidLink;
+        }
+        else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+            window.location.href = data.iosLink;
+        }
+        else {
+            window.location.href = '/m.html';
+        }
     });
 </script>
 </body>
