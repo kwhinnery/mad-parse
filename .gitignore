@@ -1,0 +1,5 @@
+.DS_Store
+.idea
+cloud/cloudConfig.js
+config/global.json
+www/config.json

@@ -1,0 +1,33 @@
+html {
+    background: url(../img/bg-mobile.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#container {
+    position:relative;
+    margin:10px auto 0 auto;
+    width:310px;
+    height:360px;
+}
+
+#downloads {
+    position:absolute;
+    bottom:0;
+    text-align: right;
+}
+
+#downloads p {
+    font-size: 14px;
+    float:right;
+    padding:5px;
+    border: 1px #fff solid;
+    border-radius:5px;
+    background-color: #000;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    color:#fff;
+    font-weight: bold;
+}

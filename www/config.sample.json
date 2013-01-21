@@ -1,0 +1,9 @@
+{
+    "appName":"ReadGood",
+    "title":"Your kids want to ReadGood",
+    "description":"ReadGood is the new app for kids that want to learn to read good - and do other stuff good, too.",
+    "iosLink":"https://itunes.apple.com/us/app/plants-vs.-zombies/id350642635?mt=8",
+    "androidLink":"https://play.google.com/store/apps/details?id=com.popcap.pvz_na",
+    "parseAppId":"YOUR_PARSE_APPLICATION_ID",
+    "parseJavaScriptKey":"YOUR_PARSE_JAVASCRIPT_KEY"
+}
