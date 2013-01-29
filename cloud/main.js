@@ -15,7 +15,7 @@ Parse.Cloud.define('sendLink', function(request, response) {
     twilio.sendSMS({
         From: cloudConfig.from, //a twilio number you control
         To: n,
-        Body: cloudConfig.message+request.params.redirect
+        Body: cloudConfig.message + cloudConfig.downloadLink
     }, {
         success: function(httpResponse) {
             console.log(httpResponse);

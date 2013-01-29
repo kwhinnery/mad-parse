@@ -49,16 +49,14 @@
     $submit.on('click', function(e) {
         toggle(false);
 
-        //Get a link to the download redirect page - should be on the same domain, same level, at download.html
-        var link = window.location.protocol + '//' + window.location.host + '/download.html';
+        var $info = $('#info');
 
         //execute Parse cloud code to send an SMS
         Parse.Cloud.run('sendLink', {
-            phoneNumber:$phoneNumber.val(),
-            redirect:link
+            phoneNumber:$phoneNumber.val()
         }, {
             success:function(response) {
-                $('#info').removeClass('error')
+                $info.removeClass('error')
                     .addClass('info')
                     .html('Awesome! The link should be on it\'s way.')
                     .fadeIn();
@@ -66,7 +64,7 @@
                 toggle(true);
             },
             error: function(response) {
-                $('#info').removeClass('info')
+                $info.removeClass('info')
                     .addClass('error')
                     .html('There was a problem sending the link - please check your number and try again')
                     .fadeIn();
